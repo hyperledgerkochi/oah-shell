@@ -105,7 +105,7 @@ function downloadScripts() {
 
   #https://github.com/hyperledgerkochi/oah-shell/archive/0.0.1-1.zip
   oah_version_url="$OAH_GITHUB_URL/oah-shell/master/archives/$OAH_VERSION.zip"
-  echo $oah_version_url
+  # echo $oah_version_url
   oah_zip_file=$OAH_DIR/tmp/oah-$OAH_VERSION.zip
   echo "Fetching $oah_version_url"
   if curl -s -f --head $oah_version_url > /dev/null 2>&1; then
