@@ -105,7 +105,7 @@ function downloadScripts() {
   # done
 
   #https://github.com/openapphack/oah-shell/archive/0.0.1-1.zip
-  oah_version_url="$OAH_GITHUB_URL/oah-shell/dev/archives/$OAH_VERSION.zip"
+  oah_version_url="$OAH_GITHUB_URL/oah-shell/master/archives/$OAH_VERSION.zip"
   # echo $oah_version_url
   oah_zip_file=$OAH_DIR/tmp/oah-$OAH_VERSION.zip
   echo "Fetching $oah_version_url"
