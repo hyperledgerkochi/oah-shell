@@ -1,5 +1,5 @@
 # oah-shell
-Shell for hyperledgerkochi
+Shell for openapphack
 
 # Installation
 

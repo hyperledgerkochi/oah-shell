@@ -1,6 +1,7 @@
 #!/bin/bash
 
-OAH_NAMESPACE=${OAH_NAMESPACE:=hyperledgerkochi}
+# OAH_NAMESPACE=${OAH_NAMESPACE:=openapphack}
+[[ -z $OAH_NAMESPACE ]] && export OAH_NAMESPACE=openapphack
 OAH_ROOT=${OAH_ROOT:="$HOME"}
 OAH_DIR="$OAH_ROOT/.oah"
 OAH_HOST_SERVER=${OAH_HOST_SERVER:=https://raw.githubusercontent.com}
@@ -54,8 +55,8 @@ case "$(uname)" in
         freebsd=true
 esac
 
-echo '                                                                     '
-echo 'Thanks for using     Hyperledgerkochi(OAH SHELL)                            '
+echo ""                                                                     
+echo "Thanks for using     "$OAH_NAMESPACE"(OAH SHELL)"
 echo '                                                                     '
 echo '                                                                     '
 echo '                                       Will now attempt installing...'
@@ -90,7 +91,7 @@ function downloadScripts() {
 
   archive_downloaded=n
   # for ref in $OAH_VERSION master; do
-  #   #https://github.com/hyperledgerkochi/oah-shell/archive/0.0.1-1.zip
+  #   #https://github.com/openapphack/oah-shell/archive/0.0.1-1.zip
   #   oah_version_url="$OAH_GITHUB_URL/oah-shell/test_install/archives/0.0.1-a1.zip"
   #   oah_zip_file=$OAH_DIR/tmp/oah-$ref.zip
   #   echo "Fetching $oah_version_url"
@@ -103,8 +104,8 @@ function downloadScripts() {
   #   fi
   # done
 
-  #https://github.com/hyperledgerkochi/oah-shell/archive/0.0.1-1.zip
-  oah_version_url="$OAH_GITHUB_URL/oah-shell/master/archives/$OAH_VERSION.zip"
+  #https://github.com/openapphack/oah-shell/archive/0.0.1-1.zip
+  oah_version_url="$OAH_GITHUB_URL/oah-shell/dev/archives/$OAH_VERSION.zip"
   # echo $oah_version_url
   oah_zip_file=$OAH_DIR/tmp/oah-$OAH_VERSION.zip
   echo "Fetching $oah_version_url"
@@ -337,7 +338,7 @@ EOF
 # echo "oah_insecure_ssl=false" >> "${oah_config_file}"
 
 echo "Download script archive..."
-#https://github.com/hyperledgerkochi/oah/raw/gh-pages/
+#https://github.com/openapphack/oah/raw/gh-pages/
 # curl -s "${OAH_INSTALLER_SERVICE}/res/oah-cli-scripts.zip" > "${oah_zip_file}"
 
 # TODO if release not found set OAH_SRC and install from source
